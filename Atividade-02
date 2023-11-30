@@ -1,0 +1,13 @@
+alert('Calculando a média do aluno!');
+
+let noteOne = Number(prompt('Digite a primeira nota: '));
+let noteTwo = Number(prompt('Digite a segunda nota: '));
+let noteThree = Number(prompt('Digite a terceira nota: '));
+
+noteOne *= 2;
+noteTwo *= 3;
+noteThree *= 5;
+
+const media = (noteOne + noteTwo + noteThree) / 10;
+
+alert(`A média do aluno é: ${media}`);
