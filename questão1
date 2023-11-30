@@ -1,0 +1,20 @@
+var populacaoA = 80000;
+var populacaoB = 20000;
+
+const taxaCrescimentoA = 0.03;
+const taxaCrescimentoB = 0.015;
+
+var anos = 0;
+
+while (true) {
+   populacaoA = parseInt(populacaoA * (1 + taxaCrescimentoA));   
+   populacaoB = parseInt(populacaoB * (1 + taxaCrescimentoB));
+   anos++;
+
+   if (populacaoA >= populacaoB) {
+    console.log(
+	"anos: ${anos}, populacaoA: ${populacaoA}, populacaoB ${populacaoB}");
+	break;
+    }
+}	
+
