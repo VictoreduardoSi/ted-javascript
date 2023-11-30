@@ -1,0 +1,37 @@
+let listaDeAlturas = [];
+let alturaDosHomens = [];
+
+let contadorDeMulheres = 0;
+
+for (let i = 1; i <= 15; i++) {
+  const altura = Number(prompt("Digite a altura (em cm): "));
+  const genero = prompt("Digite seu gênero ('M' para masculino e 'F' para feminino): ");
+
+  listaDeAlturas.push(altura);
+
+  if (genero.toUpperCase() === "F") {
+    contadorDeMulheres++;
+  } else if (genero.toUpperCase() === "M") {
+    alturaDosHomens.push(altura);
+  } else {
+    alert("Gênero não reconhecido. Por favor, digite 'M' para masculino e 'F' para feminino.");
+    i--; 
+  }
+}
+
+let soma = 0;
+for (let i = 0; i < alturaDosHomens.length; i++) {
+  soma += alturaDosHomens[i];
+}
+
+const media = alturaDosHomens.length > 0 ? soma / alturaDosHomens.length : 0;
+
+let maiorAltura = Math.max(...listaDeAlturas);
+let menorAltura = Math.min(...listaDeAlturas);
+
+alert(`Lista de Alturas: ${listaDeAlturas}`);
+alert(`Altura dos Homens: ${alturaDosHomens}`);
+alert(`Maior Altura: ${maiorAltura}`);
+alert(`Menor Altura: ${menorAltura}`);
+alert(`Média da Altura dos Homens: ${media.toFixed(1)}`);
+alert(`Número de Mulheres: ${contadorDeMulheres}`);
