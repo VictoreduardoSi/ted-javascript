@@ -1,0 +1,13 @@
+var numeros = [-3, -2, -1, 0, 1, 2, 31;
+var menor = Infinity;
+var maior = -Infinity;
+var soma = 0;
+for (const numero in numeros) {
+if (numero > maior) {
+maior = numero;
+｝
+if (numero ‹ menor) {
+menor = numero,
+｝
+soma = soma + parseInt (numero);
+console.log( maior: ${maior}, menor: ${menor}, soma: ${soma}');
