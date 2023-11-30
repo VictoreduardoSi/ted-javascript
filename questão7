@@ -1,0 +1,25 @@
+var alunos = [
+  { nome: "Paulo henrique", notas: [9, 8, 7.5], curso: "Ciências da computação" },
+{ nome: "Pedro davi", notas: [8.5, 8, 8.5], curso: "Sistemas para internet" },
+  { nome: "Antonio maia", notas: [10, 4, 7], curso: "Direito" },
+  { nome: "Pedro henrique", notas: [7.5, 6, 7.6], curso: "Sistemas para Internet" },
+  { nome: "Caio villar", notas: [7.5, 9.5, 6], curso: "Ciências da computação" },
+  { nome: "Gabriel Dutra", notas: [3, 8, 7], curso: "Arquitetura" },
+  { nome: "Dekson", notas: [9, 9, 8], curso: "Contabilidade" },
+  { nome: "João pedro", notas: [7, 6, 4], curso: "SOdontologia" },
+  { nome: "Luiz Guilherme", notas: [7.5, 9, 1], curso: "Engenharia civil" }
+];
+
+function calcularMedia(notas) {
+  const soma = notas.reduce((total, nota) => total + nota, 0);
+  return soma / notas.length;
+}
+
+for (const aluno of alunos) {
+  const media = calcularMedia(aluno.notas);
+  if (media >= 7) {
+    console.log(`Nome: ${aluno.nome}`);
+    console.log(`Média Aritmética: ${media.toFixed(2)}`);
+    console.log(`Curso: ${aluno.curso}\n`);
+  }
+}
