@@ -1,0 +1,24 @@
+function calcularMontante(capitalInicial, taxaJurosMensal, tempoMeses) {
+  if (
+    capitalInicial <= 0 || isNaN(capitalInicial) ||
+    taxaJurosMensal <= 0 || isNaN(taxaJurosMensal) ||
+    tempoMeses <= 0 || isNaN(tempoMeses)
+  ) {
+    return "Valores inválidos. Todos os valores devem ser números positivos.";
+  }
+ 
+const taxaJurosDecimal = taxaJurosMensal / 100; 
+  const montante = capitalInicial * Math.pow(1 + taxaJurosDecimal, tempoMeses);
+
+  return montante.toFixed(2); 
+const capitalInicial = parseFloat(prompt("Digite o capital inicial (R$):"));
+const taxaJurosMensal = parseFloat(prompt("Digite a taxa de juros mensal (%):"));
+const tempoMeses = parseInt(prompt("Digite o tempo de investimento (meses):"));
+
+const resultado = calcularMontante(capitalInicial, taxaJurosMensal, tempoMeses);
+
+if (isNaN(resultado)) {
+  console.log(resultado); 
+} else {
+  console.log(`O montante após ${tempoMeses} meses é R$ ${resultado}`);
+}
