@@ -1,0 +1,9 @@
+var anoAtual = parseInt(prompt ("Informe o ano fim: "));
+var ano = 1995;
+var salario = 1000;
+var percentual = 0.015;
+for (ano; ano < anoAtual; ano++) {
+salario *= 1 + percentual;
+percentual *= 2;
+｝
+console. log( salário: ${salario}, percentual: ${percentual});
